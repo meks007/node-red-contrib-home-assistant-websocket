@@ -9,7 +9,6 @@ _scratchpad_flows
 *.log
 coverage
 .nyc_output
-dist/
 docs/.vuepress/.cache
 docs/.vuepress/.temp
 .node-red
