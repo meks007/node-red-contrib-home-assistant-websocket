@@ -17,6 +17,7 @@ const websocketMethods: string[] = [
     'getDeviceTriggers',
     'getDeviceTriggerCapabilities',
     'getServices',
+    'getServicesRef',
     'getStates',
     'getStatesRef',
     'getTranslations',

@@ -78,7 +78,7 @@ export default class ActionController extends InputOutputController<
             parsedMessage.action?.value &&
             typeof target.entity_id === 'string'
         ) {
-            const services = this.homeAssistant.websocket.getServices();
+            const services = this.homeAssistant.websocket.getServicesRef();
             if (
                 services[domain]?.[service]?.fields?.entity_id !== undefined &&
                 !mergedData.entity_id
