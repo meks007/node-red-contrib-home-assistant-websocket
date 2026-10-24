@@ -61,7 +61,7 @@ export default function issueCheck(config: ActionNodeProperties): Issue[] {
     // Check if the action is valid
     if (config.action && !isDynamicValue(config.action)) {
         const ha = getHomeAssistant(config);
-        const services = ha?.websocket.getServices();
+        const services = ha?.websocket.getServicesRef();
         const [domain, service] = config.action
             .toLocaleLowerCase()
             .split('.')
