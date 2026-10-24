@@ -17,6 +17,7 @@ import { createRequire } from 'module';
 import path from 'path';
 import postcss from 'postcss';
 import * as sass from 'sass';
+import { fileURLToPath } from 'url';
 
 // Constants
 const DOCS_URL =
@@ -385,7 +386,7 @@ const processMarkdown = (markdown) => {
     return md.render(markdown);
 };
 
-const __dirname = path.dirname(new URL(import.meta.url).pathname);
+const __dirname = path.dirname(fileURLToPath(import.meta.url));
 
 const buildEditorFiles = async () => {
     const isDevMode = process.argv[2] === 'start';
