@@ -426,7 +426,15 @@ export default class Websocket {
     }
 
     onClientStates(entities: HassEntities): void {
-        if (!entities || Object.keys(entities).length === 0) {
+        //if (!entities || Object.keys(entities).length === 0) {
+        //    return;
+        //}
+
+        if (!entities) {
+            return;
+        }
+
+        if (!this.#statesLoaded && Object.keys(entities).length === 0) {
             return;
         }
 
