@@ -769,6 +769,10 @@ export default class Websocket {
         return structuredClone(this.services);
     }
 
+    getServicesRef(): Readonly<HassServices> {
+        return this.services;
+    }
+
     getTag(tagId: string): HassTag | undefined {
         //return cloneDeep(this.tags?.find((tag) => tag.id === tagId));
         return structuredClone(this.tags?.find((tag) => tag.id === tagId));
