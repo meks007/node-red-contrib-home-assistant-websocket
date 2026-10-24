@@ -18,6 +18,7 @@ const websocketMethods: string[] = [
     'getDeviceTriggerCapabilities',
     'getServices',
     'getStates',
+    'getStatesRef',
     'getTranslations',
     'getUser',
     'send',
@@ -130,7 +131,7 @@ export default class HomeAssistant {
     }
 
     getEntities(): string[] {
-        const states = this.websocket.getStates() as HassEntities;
+        const states = this.websocket.getStatesRef() as HassEntities;
         const entities = Object.keys(states).sort();
 
         return entities;

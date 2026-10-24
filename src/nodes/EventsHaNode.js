@@ -169,7 +169,7 @@ class EventsHaNode extends EventsNode {
                 );
             }
 
-            entity = this.homeAssistant.getStates(entityId);
+            entity = this.homeAssistant.getState(entityId);
 
             if (!entity) {
                 throw new Error(
