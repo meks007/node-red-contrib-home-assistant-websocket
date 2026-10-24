@@ -61,6 +61,7 @@ export default function createSocket({
 
         const socket = new WebSocket(url, {
             handshakeTimeout: HANDSHAKE_TIMEOUT,
+            perMessageDeflate: false,
             rejectUnauthorized: rejectUnauthorizedCerts,
         }) as HaWebSocket;
 
